@@ -12,18 +12,18 @@ I want to be able to @emph{mixin} languages together.
 Let's say that I want to take any language, treat it as a parent, and
 then add my custom @racket[#%app] binding to it.
 
-It's possible to do this by hand, but I want to make it stupidly easy.
-Here's what I want.  I would love to be able to say:
+It's possible to do this by hand, but I want to make it stupid-easy.
+I would love to be able to say:
 
 @filebox["my-traced-racket.rkt"]{
 @verbatim|{
-   #lang planet dyoo/mixin-lang/apply-mixin
+   #lang planet dyoo/mixin-lang/apply
    #:parent racket
    #:mixin "my-lang.rkt"
 }|}
 
 
-where @filepath{trace-mixin.rkt} look like this:
+where @filepath{trace-mixin.rkt} looks like this:
 @filebox["trace-mixin.rkt"]{
 @verbatim|{
 #lang planet dyoo/mixin-lang/mixin
